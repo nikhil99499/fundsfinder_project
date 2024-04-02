@@ -1,0 +1,9 @@
+<!-- remove_scholarship.html -->
+{% include 'navbar.html' %}
+
+<form method="post" action="">
+  {% csrf_token %}
+  {{ form.confirm_removal }}
+  <h1>This action cannot be retrieved!</h1>
+  <button type="submit">Remove Scholarship</button>
+</form>

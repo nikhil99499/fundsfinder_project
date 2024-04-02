@@ -1,0 +1,72 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <style>
+  .card-group, .card, .card-body{
+    background-color: rgb(180, 183, 211);
+    box-shadow: 10px 16px 16px #422b72;
+
+  }
+  .container
+  {
+    margin-top: 5%;
+  }
+ </style>
+<body>
+  <div class="container">
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <p><a class="nav-link" href="{% url 'editprofile' id=profile.id %}">Edit profile</a></p>
+        <p class="profile-info">Username: {{ profile.user }}</p>
+        <p class="profile-info">Telephone: {{ profile.telephone_number }}</p>
+        <p class="profile-info">Email: {{ profile.contact_email }}</p>
+        <p class="profile-info">Optional Contact Phone: {{ profile.optional_contact_phone }}</p>
+        <p class="profile-info">Date of Birth: {{ profile.date_of_birth }}</p>
+        <p class="profile-info">Optional Contact Phone: {{ profile.optional_contact_phone }}</p>
+    </div>
+  </div>
+    <div class="card">
+      <div class="card-body">
+        <p class="profile-info">Current_school: {{ profile.current_school }}</p>
+
+        <p class="profile-info">field_of_study:{{ profile.field_of_study }}</p>
+
+        <p class="profile-info"> current_grade_level : {{ profile.current_grade_level }}</p>
+        <p class="profile-info">cumulative_gpa : {{ profile.cumulative_gpa }}</p>
+        <p class="profile-info">personal_statement: {{ profile.personal_statement}}</p>
+        <p class="profile-info">optional_essay: {{ profile.optional_essay }}</p>
+        <p class="profile-info"> reference_name: {{ profile.reference_name }}</p>
+        <p class="profile-info">reference_email: {{ profile.reference_email }}</p>
+    </div>
+  </div>
+    <div class="card">
+      <div class="card-body">
+        <p class="profile-info">custom_fields: {{ profile.custom_fields }}</p>
+
+        <p class="profile-info"> current_grade_level : {{ profile.current_grade_level }}</p>
+        <p class="profile-info">cumulative_gpa : {{ profile.cumulative_gpa }}</p>
+        <p class="profile-info">personal_statement: {{ profile.personal_statement}}</p>
+        <p class="profile-info">optional_essay: {{ profile.optional_essay }}</p>
+        <p class="profile-info"> reference_name: {{ profile.reference_name }}</p>
+        <p class="profile-info">reference_email: {{ profile.reference_email }}</p>
+        <p class="profile-info"> {{ profile.custom_fields }}</p>
+      </div>
+    </div>
+  
+  </div>
+  
+  </div>
+</body>
+  </html>
+
+
+
